@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int jumlahHariTerlambat, denda;
+
+    cout << "Masukkan jumlah hari terlambat: ";
+    cin >> jumlahHariTerlambat;
+
+    if (jumlahHariTerlambat <= 0) {
+        cout << "Kurang dari 100000\n";
+        denda = jumlahHariTerlambat;
+    } 
+    else if (jumlahHariTerlambat >= 1 && jumlahHariTerlambat <= 3) {
+        denda = 2000;
+    } 
+    else if (jumlahHariTerlambat >= 4 && jumlahHariTerlambat <= 7) {
+        denda = 5000;
+    } 
+    else if (jumlahHariTerlambat >= 8) {
+        denda = 10000;
+    }
+
+    cout << "Jumlah Hari Terlambat : " << jumlahHariTerlambat << endl;
+    cout << "Denda kamu : " << denda << endl;
+
+    return 0;
+}
