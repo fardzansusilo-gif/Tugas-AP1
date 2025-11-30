@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float speed;
+    cout << "=== Drone Racing ===\n";
+    cout << "Masukkan kecepatan drone (km/jam): ";
+    cin >> speed;
+
+    if (speed < 40) {
+        cout << "Level: Basic\n";
+    } else if (speed <= 70) {
+        cout << "Level: Intermediate\n";
+    } else if (speed <= 120) {
+        cout << "Level: Advanced\n";
+    } else {
+        cout << "Level: Ultra\n";
+    }
+
+    return 0;
+}
