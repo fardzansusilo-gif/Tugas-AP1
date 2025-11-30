@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int alat, menit;
+    int biayaPer15 = 0;
+
+    cout << "=== Arena Gym ===\n";
+    cout << "1. Dumbbell   -> Rp 5000 / 15 menit\n";
+    cout << "2. Treadmill  -> Rp 10000 / 15 menit\n";
+    cout << "3. Barbel     -> Rp 8000 / 15 menit\n";
+    cout << "4. Static Bike-> Rp 7000 / 15 menit\n";
+
+    cout << "Pilih alat: ";
+    cin >> alat;
+
+    cout << "Masukkan durasi (menit): ";
+    cin >> menit;
+
+    switch (alat) {
+        case 1: biayaPer15 = 5000; break;
+        case 2: biayaPer15 = 10000; break;
+        case 3: biayaPer15 = 8000; break;
+        case 4: biayaPer15 = 7000; break;
+        default:
+            cout << "Pilihan alat tidak valid!\n";
+            return 0;
+    }
+
+    int blok = menit / 15;
+    int total = 0;
+
+    // Loop untuk menghitung total harga
+    for (int i = 0; i < blok; i++) {
+        total += biayaPer15;
+    }
+
+    cout << "Total biaya sewa: Rp " << total << endl;
+
+    return 0;
+}
