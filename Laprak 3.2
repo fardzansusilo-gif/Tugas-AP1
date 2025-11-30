@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int umur;
+    cout << "=== Survival Camp ===\n";
+    cout << "Masukkan umur peserta: ";
+    cin >> umur;
+
+    if (umur < 10) {
+        cout << "Peralatan: Starter Kit\n";
+    } else {
+        if (umur <= 15) {
+            cout << "Peralatan: Basic Gear\n";
+        } else if (umur <= 20) {
+            cout << "Peralatan: Pro Gear\n";
+        } else {
+            cout << "Peralatan: Expert Gear\n";
+        }
+    }
+
+    return 0;
+}
